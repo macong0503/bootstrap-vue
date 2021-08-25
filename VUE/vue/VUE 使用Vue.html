@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script src="./vue/vue.global.js"></script>
+		<div id="app">
+			<div v-bind:title="biaoti">呵呵</div>
+		</div>
+		<script>
+		Vue.createApp({
+			data:function(){
+				return{
+					biaoti:"这是标题。。。"
+
+				}
+			}
+		}).mount("#app");
+	</body>
+</html>
