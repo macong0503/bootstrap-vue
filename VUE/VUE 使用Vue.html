@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script src="./vue/vue.global.js"></script>
+		<div id="app">
+			<div :title="biaoti">呵呵</div>
+			<div>{{name}}</div>
+			<div>{{count}}</div>
+			<button @click="minus()">-</button> <input v-model="count" /> <button @click="add()">+</button>
+		</div>
+		<script>
+		var info = {
+			biaoti:"aaaa",
+			count:5
+		}
+		Vue.createApp({
+			data:function(){
+				return info;
+			},
+			methods:{
+				minus:function(){
+					this.count = this.count -1;
+				},
+				add:function(){
+					this.count = this.count +1;
+				},
+			}
+		}).mount("#app");
+
+		</script>
+	</body>
+</html>
