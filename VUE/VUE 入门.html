@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+		<button onclick="f()">用原生的js</button>
+		<button onclick="g()">用jQuery</button>
+		<ul id="food">
+			
+			
+		</ul>
+		</div>
+		<script src="../../js/jquery-3.6.0.js"></script>
+		<script>
+		var arr = ["苹果","西瓜","葡萄","梨","香蕉","水蜜桃"]
+		</script>
+		<script>
+		function f(){
+			var parent = document.getElementById("food");
+			for(item of arr){
+				var node = document.createElement("li");
+				node.innerText = item;
+				parent.appendChild(node);
+			}
+		}
+		</script>
+		<script>
+		function g(){
+			for(item of arr){
+				$("#food").append("<li>"+item+"</li>");
+			}
+		}
+		</script>
+	</body>
+</html>
